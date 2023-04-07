@@ -2,12 +2,16 @@ import pymongo
 from discord.ext import commands
 import discord
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
+
+
+MONGO_CLIENT_KEY = os.getenv('MONGO_CLIENT_KEY')
+TOKEN = os.getenv('TOKEN')
 
 bot = commands.Bot(command_prefix="!", intents= discord.Intents.all())
 
-MONGO_CLIENT_KEY = os.environ.get('MONGO_CLIENT_KEY')
-TOKEN = os.environ.get('TOKEN')
 
 client = pymongo.MongoClient(MONGO_CLIENT_KEY)
 dbuser = client.userconfig
