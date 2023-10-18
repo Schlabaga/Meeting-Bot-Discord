@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix="!", intents= discord.Intents.all())
 
 heure = dt.datetime.utcnow()+dt.timedelta(hours=1)
 
-#INITIALISATION DE L'EMBED NOPROFIL
+#INITIALISATION DE L'EMBED NOPROFIL  
 
 async def SuppMsg(msg, scds= 1):
   await asyncio.sleep(scds)
